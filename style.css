@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Figtree", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #B4D4FF, #B4D4FF, #86B6F6, #2196f3);
+
+}
+
+.to-do-container {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    padding: 15px 30px;
+    text-align: center;
+    width: 400px;
+}
+
+.to-do-container h1 {
+    color: #3e3e3e;
+}
+
+#task-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 20px;
+}
+
+#task-input {
+    font-family: inherit;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    height: 45px;
+    outline-color: #ccc;
+}
+
+#add-task-btn {
+    padding: 0 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 25%;
+    height: 45px;
+    border: none;
+    color: rgb(26, 26, 26);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+}
+
+#add-task-btn:hover {
+    background-image: rgba(213, 213, 213, 0.5);
+}
+
+#add-task-btn:active {
+    transform: scale(0.9);
+}
+
+.task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.task-item span {
+    width: 66%;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.task-item button {
+    font-family: inherit;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.task-item button:active {
+    transform: scale(0.9);
+}
+
+#edit {
+    background-color: #4caf50;
+    margin-right: 10px;
+}
+
+#delete {
+    background-color: #2196f3;
+}
+
+@media (max-width: 600px) {
+    .to-do-container {
+        width: 90%;
+        padding: 15px 20px;
+    }
+
+    #task-input {
+        width: 65%;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    #add-task-btn {
+        width: 30%;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+    }
+
+    .task-item span {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .task-item button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    #edit, #delete {
+        margin-right: 0;
+    }
+}
